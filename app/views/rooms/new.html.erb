@@ -1,0 +1,25 @@
+<h1>新規で募集を掛ける</h1>
+<%= form_for @room do |f| %>
+
+	<p>
+		<%= f.label  "募集名" %>
+		<%= f.text_field  :title %>
+		<% if @room.errors.any? %>
+			<%= @room.errors.messages[:title][0] %>
+		<% end %>
+	</p>
+	<p>
+		<%= f.label  "募集エリア" %>
+
+		<%= f.select :area, @area ,class:"form-control" %>
+		<% @room %>
+	</p>
+	<p>
+		<%= f.label  "合言葉の設定がある場合ここに記載すること" %>
+		<%= f.text_field  :keyword %>
+	<p>
+		<%= f.submit%>
+		<%  %>
+	</p>
+
+<% end %>

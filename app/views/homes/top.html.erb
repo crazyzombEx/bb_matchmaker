@@ -1,0 +1,13 @@
+	<h1 class="text-center">BB MATCHMAKER</h1>
+	<div class="row">
+  	<div class="col-md-12 ">
+			<% if logged_in? %>
+				<%= render :template => "rooms/index" %>
+		  <% else %>
+		  <p class="text-center">
+		  	新規で募集を行うためにはTwitterのログイン認証を行って下さい。<br><br>
+		  	<%= link_to 'Twitterでログイン', 'auth/twitter' , class: "btn btn-primary" %>
+		  </p>
+		  <% end %>
+		</div>
+	</div>

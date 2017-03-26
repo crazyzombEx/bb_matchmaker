@@ -1,0 +1,14 @@
+<h1>現在募集一覧</h1>
+<p><%= link_to "新規で募集を掛ける" , new_room_path %></p>
+<ul>
+	<% @rooms.each do |room| %>
+	<li>
+		<%= link_to room.title, room_path(room.id) %> : <%= room.area %> | 募集者 :  <%= room.roommaster %> | 合言葉 : <%= room.keyword %> |
+		<% if room.roommaster == current_user.nickname %>
+			<%= link_to "編集" , edit_room_path(room.id) %> |
+			<%= link_to "削除" , room_path(room.id) , method: :delete, data: {confirm: "本当に削除してよろしいですか？"}%>
+		<% end %>
+	</li>
+	<% end %>
+</ul>
+<br>

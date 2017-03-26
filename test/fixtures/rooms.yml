@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  area: MyString
+  keywood: MyString
+  complete: false
+  content: MyString
+  roommaster: MyString
+
+two:
+  title: MyString
+  area: MyString
+  keywood: MyString
+  complete: false
+  content: MyString
+  roommaster: MyString
