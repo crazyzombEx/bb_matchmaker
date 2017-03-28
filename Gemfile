@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.2'
+gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'bcrypt',         '3.1.11'

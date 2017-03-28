@@ -26,11 +26,11 @@ ActiveRecord::Schema.define(version: 20170326155543) do
     t.string   "title"
     t.string   "area"
     t.string   "keyword"
-    t.boolean  "complete"
+    t.boolean  "complete",   default: false
     t.string   "content"
     t.string   "roommaster"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "users", force: :cascade do |t|
