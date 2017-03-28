@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  before_filter :require_user
 
   def create
     user = User.find_or_create_from_auth(request.env['omniauth.auth'])
