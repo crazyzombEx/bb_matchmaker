@@ -4,16 +4,11 @@
 		<p>募集エリア : <%= @room.area %></p>
 
 		<p>募集者 : <%= @room.roommaster %></p>
-
+		<p>合言葉 : <%= @room.keyword %></p>
 		<p><%= link_to "募集一覧に戻る" , rooms_path %></p>
 	</div>
 
 	<div class="col-sm-5">
-		<%= form_for [@room, @room.comments.build] do |f| %>
-		<%= f.text_field :content %><br>
-		<%= f.submit "comment" , class: "btn btn-primary"%>
-		<% end %>
-		<hr>
 		<% @room.comments.each do |comment| %>
 			<div class="clearfix">
 				<div class="col-xs-2">
@@ -26,6 +21,11 @@
 			</div>
 			<hr>
 		<% end %>
+		<%= form_for [@room, @room.comments.build] do |f| %>
+		<%= f.text_field :content %><br>
+		<%= f.submit "comment" , class: "btn btn-primary"%>
+		<% end %>
+		<hr>
 		
 		
 			
